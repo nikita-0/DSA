@@ -1,0 +1,51 @@
+//FLOOR AND CEIL IN SORTED ARRAY
+
+**Floor of x is the largest element in the array which is smaller than or equal to x.
+**Ceiling is the smallest element in the array greater than or equal to x.
+
+
+import java.util.*;
+import java.io.*;
+
+public static int ceilingInSortedArray(int n, int x, int[] arr) {
+       
+        Arrays.sort(arr);
+
+        //Binary search
+
+        int low = 0, high = n-1, floor = -1, ceil = -1;
+
+        while (low <= high) {
+
+            int mid = low + (high - low)/2;
+
+            if (arr[mid] == x) {
+
+                floor = arr[mid];
+
+                ceil = arr[mid];
+
+                break;
+
+            } else if (arr[mid] < x) {
+
+                floor = arr[mid];
+
+                low = mid+1;
+
+            } else {
+
+                ceil = arr[mid];
+
+                high = mid-1;
+
+            }
+
+        }
+
+        System.out.print(floor+" ");
+
+        return ceil;
+
+    }
+}
