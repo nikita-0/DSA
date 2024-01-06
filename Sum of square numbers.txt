@@ -1,0 +1,27 @@
+/*Sum of square numbers*/
+
+class Solution {
+    public boolean judgeSquareSum(int c) {
+         // Initialize two pointers: i starts at 0, and j starts at the square root of 'c'
+        long i = 0;
+        long j = (long)Math.sqrt(c);
+
+        // Use a two-pointer approach to search for a pair of squares that sum up to 'c'
+        while (i <= j) {
+            // Calculate the sum of squares of 'i' and 'j'
+            long sum = (i * i) + (j * j);
+
+            // If the sum is equal to 'c', we've found a valid pair
+            if (sum == c) {
+                return true;
+            } else if (sum < c) {
+                // If the sum is less than 'c', increment the smaller pointer (i)
+                i++;
+            } else {
+                // If the sum is greater than 'c', decrement the larger pointer (j)
+                j--;
+            }  
+    }
+    return false;
+}
+}
