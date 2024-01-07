@@ -1,0 +1,22 @@
+/*Remove outermost parentheses*/
+
+public class Solution {
+    public static int maxDepth(String s) {
+        // Write your code here.
+        int count=0;
+        int currDepth=0;
+        int maxDep=Integer.MIN_VALUE;
+
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='(') count++;
+            else if(s.charAt(i)==')') count--;
+            else
+            {
+                currDepth=count;
+                maxDep=Math.max(currDepth , maxDep);
+            }
+        }
+        return maxDep;
+    }
+}
