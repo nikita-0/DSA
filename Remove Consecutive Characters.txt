@@ -1,0 +1,17 @@
+/*Remove Consecutive Characters*/
+
+S = aabb
+Output:  ab 
+
+
+class Solution{
+    public String removeConsecutiveCharacter(String S){
+        String Str=S.valueOf(S.charAt(0));
+		for(int i=1;i<S.length();i++) {
+		    if(S.charAt(i)!=S.charAt(i-1)) {
+				Str+=S.charAt(i);
+			}
+		}
+	return Str;
+    }
+}

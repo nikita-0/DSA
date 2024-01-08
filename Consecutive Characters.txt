@@ -1,0 +1,28 @@
+/*Consecutive Characters*/
+
+s=leetcode====>2(ee)
+s=aaddbbccccc====>5(ccccc)
+
+
+class Solution {
+    public int maxPower(String s) {
+     int max=1;
+     int temp=1;
+
+     char[] ch=s.toCharArray();
+
+     for(int i=1;i<ch.length;i++)
+     {
+         if(ch[i]==ch[i-1])
+         {
+             temp++;
+             max=Math.max(max,temp);
+         }
+         else
+         {
+             temp=1;
+         }
+     }   
+     return max;
+    }
+}
