@@ -1,0 +1,22 @@
+/*Insert at End*/
+
+public void addLast(String data){
+
+     Node newNode= new Node(data);
+
+     if(head==null){
+       return;
+   }
+
+   Node temp=head;
+
+   while(temp.next!=null){
+   
+      temp=temp.next;
+   }
+   temp.next=newNode;
+
+   return;
+
+
+}

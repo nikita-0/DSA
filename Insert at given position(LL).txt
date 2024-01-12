@@ -1,0 +1,16 @@
+/*Insert at given position*/
+
+public void addGivenPos(Node prev, int newVal){
+
+  if(prev==null){
+     System.out.println("previous node is null");
+     return;
+  }
+
+  Node newNode = new Node(newVal){
+      newNode.next=prev.next;
+
+     prev.next=newNode;
+
+   }
+}

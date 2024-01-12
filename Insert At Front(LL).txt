@@ -1,0 +1,17 @@
+/*Insert At Front*/
+
+public class Solution{
+
+   public static Node insertFirst(Node head, int newValue){
+
+         Node newwNode=new Node(newValue)
+
+         newNode.next=head;
+
+         head=newNode;
+
+         return head;
+
+
+    }
+}

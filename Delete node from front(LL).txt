@@ -1,0 +1,19 @@
+/*Delete node from front*/
+
+public void removeFirst(){
+
+   if(head==null){
+  }
+
+  else if(head.next==null){
+     head=null;
+  }
+
+  else if(head.next !=null){
+     Node curr=head;
+  
+     head=head.next;
+
+    curr.next=null;
+ }
+}
