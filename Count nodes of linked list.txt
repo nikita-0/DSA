@@ -1,0 +1,16 @@
+/*Count nodes of linked list*/
+
+
+public class Solution {
+    public static int length(Node head){
+        
+        Node currNode=head;
+        int count=0;
+        while(currNode!=null)
+        {
+            count++;
+            currNode=currNode.next;
+        }
+        return count;
+    }
+}

@@ -1,0 +1,33 @@
+/*Remove duplicates from unsorted linked list*/
+
+public Node removeDuplicates(Node node)
+{
+
+    if(node==null)
+        return null;
+
+    
+    HashMap<Integer, Integer> s = new HaswhMap<>():
+
+       Node head=node;
+       Node prev=null;
+
+       while(node!=null)
+         {
+             if(!s.containsKey(node.data)
+                  {
+                      s.put(node.data ,  1);
+
+                      prev=node;
+
+                      node=node.next;
+                  }
+              else{
+                    prev.next=node.next;
+
+                    node=node.next;
+                   }
+         }
+ 
+       return head;
+}
