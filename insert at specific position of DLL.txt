@@ -1,0 +1,20 @@
+/*insert at specific position of DLL*/
+
+public void insertAfter(Node prev_Node , int new_data)
+{
+     if(prev_Node==null)
+       return;
+
+  Node newNode=new Node(new_data);
+
+  newNode.next=prev_Node.next;
+
+  prev_Node.next=newNode;
+
+  newNode.prev= prev_Node;
+
+ if(newNode.next!=null)
+  {
+    newNode.next.prev=newNode;
+   }
+}

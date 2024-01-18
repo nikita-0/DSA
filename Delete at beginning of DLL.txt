@@ -1,0 +1,21 @@
+/*Delete at beginning of DLL*/
+
+public static void deleteFirst(Node head)
+{
+     if(head==null) return;
+
+     else{
+          if(head!=tail)
+         {
+             head=head.next;
+
+            head.prev=null;
+          }
+          else{
+               head=tail=null;
+            }
+
+     }
+   return head;
+
+}
